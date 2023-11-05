@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5b84ccf287.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href=".//index.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <i class="fa-brands fa-github"></i>
+        </div>
+    </div>
+    <div class="container">
+        <main class="main">
+            <div class="left">
+                <h2>
+                    Установка Git
+                </h2>
+                <p>
+                    GitHub предоставляет оконное приложение с графическим интерфейсом для выполнения основных операций с репозиторием, и консольную версию Git с автоматическими обновлениями для расширенных сценариев работы.
+                </p>
+                
+                <h2>
+                    GitHub Desktop
+                </h2>
+                    <a class="link" href="#">desktop.github.com</a>
+                <p>
+                    Дистрибутивы Git для систем Linux и POSIX доступны на официальном сайте Git SCM.
+                </p>
+
+                <h2>
+                    Git для всех платформ
+                </h2>
+                <a class="link" target="_blank" href="#">git-scm.com</a>
+                
+                <h2>
+                    Первоначальная настройка
+                </h2>
+                    <p>
+                        Настройка информации о пользователе для всех локальных репозиториев
+                    </p>
+                    <p class="commands">
+                        $ git config --global user.name "[имя]"
+                    </p>
+                    <p>
+                        Устанавливает имя, которое будет отображаться в поле автора у выполняемых вами коммитов
+                    </p>
+                    <p class="commands">
+                        $ git config --global user.email "[адрес электронной почты]"
+                    </p>
+                    <p>
+                        Устанавливает адрес электронной почты, который будет отображаться в информации о выполняемых вами коммитах
+                    </p>
+                
+                <h2>
+                    Создание репозитория
+                </h2>
+                <p>
+                    <p>Создание нового репозитория или получение его по существующему URL-адресу</p>
+                    <p class="commands">$ git init [название проекта]</p>
+                    <p>Создаёт новый локальный репозиторий с заданным именем</p>
+                    <p class="commands">$ git clone [url-адрес]</p>
+                    <p>Скачивает репозиторий вместе со всей его историей изменений</p>
+                </p>
+
+                <h2>
+                    Операции с файлами
+                </h2>
+                <p>
+                    Перемещение и удаление версий файлов репозитория
+                </p>
+                <p class="commands">
+                    $ git rm [файл]
+                </p>
+                <p>
+                Удаляет конкретный файл из рабочей директории и индексирует его удаление
+                </p>
+                <p class="commands">
+                    $ git rm --cached [файл]
+                </p>
+                <p>
+                Убирает конкретный файл из контроля версий, но физически оставляет его на своём месте
+                </p>
+                <p class="commands">
+                    $ git mv [оригинальный файл] [новое имя]
+                </p>
+                <p>
+                Перемещает и переименовывает указанный файл, сразу индексируя его для последующего коммита
+                </p>
+
+                <h2>
+                    Игнорирование некоторых файлов
+                </h2>
+                <p>
+                    Исключение временных и вторичных файлов и директорий
+                </p>
+                    <ul class="ignore-file">
+                        <li>*.log</li>
+                        <li>build/</li>
+                        <li>temp-*</li>
+                    </ul>
+                    <p>
+                        Git будет игнорировать файлы и директории, перечисленные в файле <p class="commands">.gitignore</p> с помощью wildcard синтаксиса
+                        <p class="commands">$ git ls-files --others --ignored --exclude-standard</p>
+                        Список всех игнорируемых файлов в текущем проекте
+                    </p>
+                    <h2>
+                        Сохранение фрагментов
+                    </h2>
+                    <p>
+                        Сохранение и восстановление незавершённых изменений
+                    </p>
+
+                        <p class="commands">$ git stash</p>
+                        <p>Временно сохраняет все незафиксированные изменения отслеживаемых файлов</p>
+                        <p class="commands">$ git stash pop</p>
+                        <p>Восстанавливает состояние ранее сохранённых версий файлов</p>
+                        <p class="commands">$ git stash list</p>
+                        <p>Выводит список всех временных сохранений</p>
+                        <p class="commands">$ git stash drop</p>
+                        <p>Сбрасывает последние временно сохранённыe изменения</p>
+                    </p>
+                </div>
+            
+            <div class="right">
+                <h2>
+                    Внесение изменений
+                </h2>
+                <p>
+                    Просмотр изменений и создание коммитов (фиксация изменений)
+                </p>
+                <p class="commands">
+                    $ git status
+                </p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
