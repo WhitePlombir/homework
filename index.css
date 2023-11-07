@@ -63,4 +63,14 @@ h2{
     background-color: lightgray;
 }
 
+.footer{
+    margin: 0 auto;
+}
+
+.fut-info{
+    border-top: 1px solid gray;
+    text-align: center;
+    padding: 15px 0px;
+    background-color: rgb(219, 219, 219);
+}
 
